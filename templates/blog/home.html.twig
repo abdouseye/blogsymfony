@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1> Bienvenue dans mon blog ! </h1>
+<p>Dans cette on va afficher les catégories avec des liens vers des pages qui regroupent les articles par catégorie</p>
+
+<section class="categorys">
+
+    {% for category in categories %}
+
+    <div class="for-row">
+
+        <articles>
+            <h2> {{ category.title }}</h2>
+
+            <div class="content">
+
+                {{ category.description | raw }}
+            </div>
+        </articles>
+
+    </div>
+
+    {% endfor %}
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+{% endblock %}
